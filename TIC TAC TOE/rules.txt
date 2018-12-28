@@ -1,0 +1,8 @@
+RULES OF TIC TAC TOE
+--------------------
+
+1. The objective of Tic Tac Toe is to get four in a row. 
+2. You play on a four by four game board. 
+3. The first player is known as X and the second is O. 
+4. Players alternate placing Xs and Os on the game board until either oppent has four in a row or all sixteen positions are filled. 
+5. X always goes first, and in the event that no one has four in a row, the stalemate is called a draw game.
