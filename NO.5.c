@@ -1,20 +1,21 @@
 #include<stdio.h>
-int sumOfDigits(int x);
-int main()
+void prime();
+void main()
 {
-    int number;
-    scanf("%d",&number);
-    int result=sumOfDigits(number);
-    printf("the result is:%d",result);
+    prime();
 }
-int sumOfDigits(int x)
+void prime()
 {
-    int digit,sum=0;
-    for(;x>0;)
+    int n,i,flag=1;
+    printf("enter a number:");
+    scanf("%d",&n);
+    for(i=2;i<n;i++)
     {
-        digit=x%10;
-        x=x/10;
-        sum=sum+digit;
+        if(n%i==0)
+        flag = 0;
     }
-    return sum;
+    if(flag == 1)
+      printf("Number is Prime",n);
+    else
+      printf("Number is not Prime",n);
 }

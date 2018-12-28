@@ -1,22 +1,35 @@
-#include <stdio.h>
+#include<stdio.h>
+void pattern(int length);
 int main()
 {
-    int i, j, n;
-    printf("Enter number of rows : ");
-    scanf("%d",&n);
-
-    for(i=1; i<=n; i++)
+    int l;
+    l=3;
+    pattern(l);
+    return 0;
+}
+void pattern(int length)
+{
+    int i,j,k;
+    for(i=length;i>0;i--)
     {
-        for(j=1; j<i; j++)
+        for(j=length;j>i;j--)
         {
             printf(" ");
         }
-        for(j=1; j<=(n*2 -(2*i-1)); j++)
+        if(i%2==0)
         {
-            printf("*");
+            for(k=1;k<=i;k++)
+            {
+                printf("$");
+            }
+        }
+        else
+        {
+            for(k=1;k<=i;k++)
+            {
+            printf("%d",i);
+            }
         }
         printf("\n");
     }
-
-    return 0;
 }
