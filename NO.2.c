@@ -1,17 +1,20 @@
 #include<stdio.h>
-void listNumbersAsc(int start,int end);
 int main()
 {
-    int a,b;
-    printf("enter the number from where you want to START and END:");
-    scanf("%d %d",&a,&b);
-    listNumbersAsc(a,b);
-}
-void listNumbersAsc(int start,int end)
-{
-    int i,x;
-    for(i=start;i<=end;i++)
+    int i,j,n;
+    printf("enter the number of rows:\n");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
     {
-        printf("  %d\n",i);
+        for(j=1;j<=n-i;j++)
+        {
+            printf(" ");
+        }
+            for(j=1;j<=2*i-1;j++)
+        {
+            printf("*");
+        }
+    printf("\n");
     }
+    return 0;
 }

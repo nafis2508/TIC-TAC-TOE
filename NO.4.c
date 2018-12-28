@@ -1,19 +1,50 @@
-#include<stdio.h>
-double harmonicsum(int n);
+#include <stdio.h>
 int main()
 {
-    double number;
-    scanf("%lf",&number);
-    double result=harmonicsum(number);
-    printf("the result is:.%.2f",result);
-}
-double harmonicsum (int n)
-{
-    int i;
-    double sum=0;
-    for(i=1;i<=n;i++)
+    int i, j, n;
+    printf("Enter value of n : ");
+    scanf("%d", &n);
+    //Loop for printing upper half part of the pattern
+    for(i=1; i<=n; i++)
     {
-        sum=sum+(double)1/i;
+        for(j=i; j<=n; j++)
+        {
+            printf("*");
+        }
+        for(j=1; j<i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<i; j++)
+        {
+            printf(" ");
+        }
+        for(j=i; j<=n; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
     }
-    return sum;
+    //Loop for printing lower half part of the pattern
+    for(i=2; i<=n; i++)
+    {
+        for(j=1; j<=i; j++)
+        {
+            printf("*");
+        }
+        for(j=i; j<n; j++)
+        {
+            printf(" ");
+        }
+        for(j=i; j<n; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
 }

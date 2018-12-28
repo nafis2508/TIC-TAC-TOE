@@ -1,19 +1,15 @@
-#include<stdio.h>
-int sum(int n);
+#include <stdio.h>
 int main()
 {
-    int number;
-    scanf("%d",&number);
-    int result=sum(number);
-    printf("the result is:%d",result);
-}
-int sum(int n)
-{
-    int add=0,i;
+    int i,j,n;
+    printf("enter the number of rows:\n");
+    scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
-        add=add+i;
+        for(j=n;j>=i;j--)
+        {
+            printf("*");
+        }
+        printf("\n");
+        }
     }
-    return add;
-}
-

@@ -1,18 +1,22 @@
-#include<stdio.h>
-void listNumbersDesc(int start,int end);
+#include <stdio.h>
 int main()
 {
-    int a,b;
-    printf("enter the number from where you want to START and END:");
-    scanf("%d %d",&a,&b);
-    listNumbersDesc(a,b);
-}
-void listNumbersDesc(int start,int end)
-{
-    int i,x;
-    for(i=end;i>=start;i--)
-    {
-        printf("  %d\n",i);
-    }
-}
+    int i, j, n;
+    printf("Enter number of rows : ");
+    scanf("%d",&n);
 
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<i; j++)
+        {
+            printf(" ");
+        }
+        for(j=1; j<=(n*2 -(2*i-1)); j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
